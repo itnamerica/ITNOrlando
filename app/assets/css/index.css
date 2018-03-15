@@ -287,14 +287,14 @@ nav .dropdown-menu li.divider{
 .homepage .rider-stories .rider-stories-text p {
   text-align:center;
 }
-.regeneron {
+.regeneron, .drivers-mart {
   background: white;
   font-size: 20px;
 }
-.regeneron h2 {
+.regeneron h2, .drivers-mart h2 {
   margin-bottom:3%;
 }
-.regeneron .reg-text {
+.regeneron .reg-text, .drivers-mart .drivers-text {
   padding-right: 8%;
   text-align: justify;
   margin-bottom: 20px;
@@ -1801,12 +1801,12 @@ h2,h3 {line-height:1.7}
     width:100%;
     padding:0;
   } 
-  .regeneron .container {width:100%;}
-  .regeneron .container .reg-img{
+  .regeneron .container, .drivers-mart .container {width:100%;}
+  .regeneron .container .reg-img, .drivers-mart .container .drivers-img{
     margin-top:50px;
     margin-bottom:50px;
   }
-  .regeneron .reg-text {
+  .regeneron .reg-text, .drivers-mart .drivers-text {
     text-align:left;
     font-weight:bold;
   }
@@ -1861,7 +1861,7 @@ h2,h3 {line-height:1.7}
     text-align:center;
   }
   .corporate .corp-icon img {margin:0}
-  .corporate .regeneron {text-align:center}
+  .corporate .regeneron, .corporate .drivers-mart {text-align:center}
   .become-member .membership-btns .btn {
     margin-left:-10%;
     font-size:15px
