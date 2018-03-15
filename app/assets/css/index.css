@@ -342,7 +342,8 @@ nav .dropdown-menu li.divider{
   margin-top: 4%;
 }
 .services .operate ul {
-  margin-top:20%;
+  /*margin-top:20%;*/
+  margin-top:5%;
   list-style-type:none;
   font-size:20px;
   font-weight:bold;
