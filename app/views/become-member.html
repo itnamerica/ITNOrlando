@@ -11,8 +11,8 @@
         <h3 class="mt-50">Who can become a member?</h3>
         
         <div class="prospective">
-          <h3>1. Prospective Riders</h3>
-          <h3>2. Prospective Drivers</h3>
+          <h3 class="wow fadeInLeft">1. Prospective Riders</h3>
+          <h3 class="wow fadeInRight" data-wow-delay="1s">2. Prospective Drivers</h3>
         </div>
       </div><!--jumbo-->
       
@@ -70,13 +70,13 @@
             
             <div class="service-features center-85">
             <div class="row">
-              <div class="col-sm-4">
+              <div class="col-sm-4 wow fadeInLeft">
                 <div class="icon-wrap icon-wrap-circle"><i class="fa fa-usd">6</i></div>
                 <div class="icon-legend">
                   The pick up charge is $6
                 </div>
               </div>
-              <div class="col-sm-4">
+              <div class="col-sm-4 wow fadeInLeft" data-wow-delay="1s">
                 <div class="icon-wrap icon-wrap-circle" style="background: #fc6d6d"><i class="fa fa-usd">1.75</i></div>
                 <div class="icon-legend">
                   The mileage charge is:<br> 
@@ -84,7 +84,7 @@
                   -$3/mile for same-day service.
                 </div>
               </div>
-              <div class="col-sm-4">
+              <div class="col-sm-4 wow fadeInLeft" data-wow-delay="2s">
                 <div class="icon-wrap icon-wrap-circle"><i class="fa fa-usd">13</i></div>
                 <div class="icon-legend">
                   The average charge is about $13 for a one way trip
@@ -92,49 +92,49 @@
               </div>
             </div><!--row-->
               
+            <div class="row">
+              <div class="col-sm-4 wow fadeInRight">
+                <div class="icon-wrap icon-wrap-circle" style="background: #fc6d6d"><i class="fa fa-id-card"></i></div>
+                <div class="icon-legend">
+                  You keep a prepaid Personal Transportation Account™ based on estimated usage.<br>
+                  <a ng-disabled="true" ui-sref="add-pta-credit">Add Credit</a>
+                </div>
+              </div>
+              <div class="col-sm-4 wow fadeInRight" data-wow-delay="1s">
+                <div class="icon-wrap icon-wrap-circle"><i class="fa fa-history"></i></div>
+                <div class="icon-legend">
+                  Plan in advance or ride on demand
+                </div>
+              </div>
+              <div class="col-sm-4 wow fadeInRight" data-wow-delay="2s">
+                <div class="icon-wrap icon-wrap-circle" style="background: #fc6d6d"><i class="fa fa-users"></i></div>
+                <div class="icon-legend">
+                  Ride alone or share a ride
+                </div>
+              </div>
+            </div><!--row-->
+              
               <div class="row">
-                <div class="col-sm-4">
-                  <div class="icon-wrap icon-wrap-circle" style="background: #fc6d6d"><i class="fa fa-id-card"></i></div>
+                <div class="col-sm-4 wow fadeInLeft">
+                  <div class="icon-wrap icon-wrap-circle"><i class="fa fa-hourglass-start"></i></div>
                   <div class="icon-legend">
-                    You keep a prepaid Personal Transportation Account™ based on estimated usage.<br>
-                    <a ng-disabled="true" ui-sref="add-pta-credit">Add Credit</a>
+                    Ride by the hour or by the mile
                   </div>
                 </div>
-                <div class="col-sm-4">
-                  <div class="icon-wrap icon-wrap-circle"><i class="fa fa-history"></i></div>
+                <div class="col-sm-4 wow fadeInLeft" data-wow-delay="1s">
+                  <div class="icon-wrap icon-wrap-circle" style="background: #fc6d6d"><i class="fa fa-car"></i></div>
                   <div class="icon-legend">
-                    Plan in advance or ride on demand
+                    You can try the service while you still own and operate a car
                   </div>
                 </div>
-                <div class="col-sm-4">
-                  <div class="icon-wrap icon-wrap-circle" style="background: #fc6d6d"><i class="fa fa-users"></i></div>
+                <div class="col-sm-4 wow fadeInLeft" data-wow-delay="2s">
+                  <div class="icon-wrap icon-wrap-circle"><i class="fa fa-trophy"></i></div>
                   <div class="icon-legend">
-                    Ride alone or share a ride
+                    The Road Scholarship™ program is available for low-income riders. 
+                    <a ui-sref="contact">more info</a>
                   </div>
                 </div>
               </div><!--row-->
-                
-                <div class="row">
-                  <div class="col-sm-4">
-                    <div class="icon-wrap icon-wrap-circle"><i class="fa fa-hourglass-start"></i></div>
-                    <div class="icon-legend">
-                      Ride by the hour or by the mile
-                    </div>
-                  </div>
-                  <div class="col-sm-4">
-                    <div class="icon-wrap icon-wrap-circle" style="background: #fc6d6d"><i class="fa fa-car"></i></div>
-                    <div class="icon-legend">
-                      You can try the service while you still own and operate a car
-                    </div>
-                  </div>
-                  <div class="col-sm-4">
-                    <div class="icon-wrap icon-wrap-circle"><i class="fa fa-trophy"></i></div>
-                    <div class="icon-legend">
-                      The Road Scholarship™ program is available for low-income riders. 
-                      <a ui-sref="contact">more info</a>
-                    </div>
-                  </div>
-                </div><!--row-->
           
           </div><!--service features-->
           
@@ -143,7 +143,7 @@
       
       
       <div class="jumbotron section" style="background:#e05944;">
-          <h3 class="ta-center">
+          <h3 class="ta-center wow rollIn">
             <a ui-sref="member-programs" style="color:white!important;font-size:30px;">
               Click here to check out the ITN's unique programs only available to paying members
             </a>
@@ -151,3 +151,8 @@
       </div><!--jumbo-->
       
     </div><!--become member-->
+    
+    
+    <script>
+  new WOW().init();
+</script>
