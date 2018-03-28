@@ -7,7 +7,7 @@
     <div class="jumbotron section" style="background: #c7dfe4">
       
       <div class="container">
-        <h3>Want to learn more about ITN<em>Orlando</em>? Have questions or comments? Use the form below, or call us at (407) 900-7572. Or visit us at 1201 S Orlando Avenue, Suite 205, Winter Park, FL 32789</h3>
+        <h3>Want to learn more about ITN<em>Orlando</em>? Have questions or comments? Use the form below, or call us at (407) 900-7572.</h3>
         <hr align="center">
         <div class="col-sm-12">
             <div class="form-area" style="background: #c7dfe4;border:none"> 
@@ -29,7 +29,7 @@
                 </div>
               
                 <div class="form-group" ng-class="{ 'has-error' : itnForm.mobile.$invalid && !itnForm.mobile.$pristine }">
-                  <input type="text" class="form-control" id="mobile" name="mobile" ng-pattern="phonePattern" placeholder="Mobile Number. Example: 617-344-9876" ng-model="formData.phone" required>
+                  <input type="text" class="form-control" id="mobile" name="mobile" ng-pattern="phonePattern" placeholder="Home or Mobile Number. Example: 617-344-9876" ng-model="formData.phone" required>
                   <span ng-if="itnForm.mobile.$error.required && !itnForm.mobile.$pristine" class="help-block">{{errorMessages.required}}</span>
                   <span ng-if="itnForm.mobile.$error.pattern" class="help-block">{{errorMessages.phone}}</span>
                 </div>
@@ -65,7 +65,7 @@
   
   <script>
   $(document).ready(function(){ 
-    $('#characterLeft').text('140 characters left');
+    $('#characterLeft').text('2000 characters left');
     $('#message').keydown(function () {
         var max = 2000;
         var len = $(this).val().length;
