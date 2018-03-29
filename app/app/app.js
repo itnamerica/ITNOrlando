@@ -190,8 +190,10 @@ myApp.controller('MainController', ['$scope', '$transitions','$http', '$anchorSc
   }
   
   $scope.resetFormData = function(){
-    $scope.formData = {};
-    $scope.serverMessage = "";
+      $scope.formData = {};
+      $scope.serverMessage = "";
+      $scope.loading = false;
+      $scope.tab = 1;
   }
 
   $scope.nextTabMemberApp = function(prev){
