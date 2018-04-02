@@ -118,15 +118,15 @@
     <h1>Our Progress</h1>
     <div class="row progress-steps">
       <div class="col-sm-4">
-        <div class="numbers">76166</div>
+        <div class="numbers" id="rides-given">76166</div>
         Rides given
       </div>
       <div class="col-sm-4">
-        <div class="numbers">710205</div>
+        <div class="numbers" id="miles-driven">710205</div>
         Miles driven
       </div>
       <div class="col-sm-4">
-        <div class="numbers">273</div>
+        <div class="numbers" id="riders">273</div>
         Riders
       </div>
     </div><!--ROW-->
@@ -181,6 +181,7 @@
       interval: 3500
     })
     
+    var firstTime = true;
     $(window).scroll(function() {
        var hT = $('#progress').offset().top,
            hH = $('#progress').outerHeight(),
@@ -203,5 +204,12 @@
          }
        }
     });
+    
+    
+  
   });
+</script>
+
+<script>
+new WOW().init();
 </script>
