@@ -1,4 +1,4 @@
-<div class="volunteer-app" ng-init="resetFormData()">
+<div class="volunteer-app" >
       
     <div class="jumbotron section first-hero" id="first-hero-volunteer-app">
       <h1>Online Volunteer Form</h1>
@@ -70,7 +70,7 @@
                     
                     <div class="member-tabs" ng-if="tab===1" id="tab1">
                       
-                      <img ng-src="{{assetsPath}}/images/icons/custom_logo.png" style="margin:auto;display:block" alt="main logo"/>
+                      <img ng-src="{{assetsPath}}/images/icons/itnlanier_white_bg.png" style="margin:auto;display:block" alt="main logo"/>
                       
                       <ol class="steps">
                         <li class="step active">
@@ -510,8 +510,8 @@
                         
                             <div class="row">
                               <div class="form-group col-sm-6">
-                                <label for="serve community">Help eldery people:</label>
-                                <select ng-model="formData.reasons.helpEldery" class="form-control" id="help">
+                                <label for="serve community">Help elderly people:</label>
+                                <select ng-model="formData.reasons.helpElderly" class="form-control" id="help">
                                   <option ng-repeat="rating in ratings"  value="{{rating}}">{{rating}}</option>
                                 </select>
                               </div>
@@ -533,8 +533,8 @@
                               </div>
                               
                               <div class="form-group col-sm-6">
-                                <label for="serve community">Enjoy eldery people:</label>
-                                <select ng-model="formData.reasons.enjoyEldery" class="form-control" id="enjoy">
+                                <label for="serve community">Enjoy elderly people:</label>
+                                <select ng-model="formData.reasons.enjoyElderly" class="form-control" id="enjoy">
                                   <option ng-repeat="rating in ratings"  value="{{rating}}">{{rating}}</option>
                                 </select>
                               </div>
@@ -570,7 +570,7 @@
 
 
                 <h2 class="mt-25">Civic Engagement</h2>
-                
+
                 <div class="form-group ta-center">
                   <label for="member of any organization">Are you a member of any of the following organizations?:</label><br>
                   <label class="checkbox-inline"><input ng-model="formData.memberOfOrganization.aaa" type="checkbox" value="aaa">AAA</label>
@@ -601,7 +601,7 @@
                 
                 <h3>Volunteer Driver Weekly Schedule</h3>
                 
-                <p>ITNOrlando will work with your schedule.</p>
+                <p>ITN<em>{{affiliate}}</em> will work with your schedule.</p>
                 <p>We provide transportation 24 hours a day 7 days a week.</p>
                 
                 <div class="form-group">
@@ -689,7 +689,7 @@
                             </div>
                             
                             <div class="form-group" ng-class="{ 'has-error' : itnForm.drivingRecordState.$invalid && !itnForm.drivingRecordState.$pristine }">
-                              <label for="license number">I authorize ITNOrlando to request and receive my Driving Record from *:</label>
+                              <label for="license number">I authorize ITN<em>{{affiliate}}</em> to request and receive my Driving Record from *:</label>
                               <select ng-model="formData.requestDriverRecord.authorize" class="form-control" name="drivingRecordState" id="state">
                                  <option ng-repeat="state in states" value="{{state}}">{{state}}</option>
                               </select>
@@ -1192,7 +1192,7 @@
                             <input type="text" class="form-control" id="itnDate" name="itnDate" ng-pattern="datePattern" ng-model="formData.changeOfStatus.itnDate" ng-disabled="true">
                           </div>
                           
-                        <button type="submit" class="btn btn-lg pull-right btn-danger" style="background:#e05944; margin-left:2%" ng-hide="loading" ng-disabled="form.$invalid">Submit</button>
+                        <button type="submit" ng-hide="loading" class="btn btn-lg pull-right btn-danger" style="background:#e05944; margin-left:2%" ng-disabled="form.$invalid">Submit</button>
                         <button type="button" ng-click="nextTabMemberApp('prev')" class="next-tab btn btn-lg btn-primary pull-right itn-green-bg"  style="margin-left:2%">Previous</button>  
                         
                         
@@ -1333,14 +1333,14 @@
   {{formData.reasons.serveCommunity}}
   <br><label for="serve community">Enjoy driving:</label><br>
   {{formData.reasons.enjoyDriving}}
-  <br><label for="serve community">Help eldery people:</label>
-  {{formData.reasons.helpEldery}}
+  <br><label for="serve community">Help elderly people:</label>
+  {{formData.reasons.helpElderly}}
   <br><label for="serve community">Additional Income:</label>
   {{formData.reasons.additionalIncome}}
   <br><label for="serve community">Occupy your time:</label>
   {{formData.reasons.occupyTime}}
-  <br><label for="serve community">Enjoy eldery people:</label>
-  {{formData.reasons.enjoyEldery}}
+  <br><label for="serve community">Enjoy elderly people:</label>
+  {{formData.reasons.enjoyElderly}}
   
   <h3>Education</h3>
   <br><label for="learn about ITN">Highest grade/degree completed:</label><br>
@@ -1350,11 +1350,11 @@
   
   <h3>Ethnic Background</h3>
   <br><label for="ethnicity">What is your ethnic background?:</label><br>
-  {{formData.ethnicBackground}}
+  {{formData.ethnicBackground | inputSelected }}
   
   <h3>Civic Engagement</h3>
   <br><label for="member of any organization">Are you a member of any of the following organizations?:</label><br>
-  {{formData.memberOfOrganization}}
+  {{formData.memberOfOrganization | inputSelected}}
   <br><label for="professional organization or labor union">Are you part of any professional organizations or labor unions?: * </label><br>
   {{formData.memberOfProfessionalOrgOrUnion}} - {{formData.memberOfProfessionalOrgOrUnions}}
   <br><label for="served in armed forces">Have you ever served on active duty in the U.S. Armed Forces, Military Reserves, or National Guard: *</label><br>
@@ -1362,7 +1362,7 @@
   
   
   <h4>Volunteer Driver Weekly Schedule</h4>
-  <p>ITNOrlando will work with your schedule.</p>
+  <p>ITN<em>{{affiliate}}</em> will work with your schedule.</p>
   <p>We provide transportation 24 hours a day 7 days a week.</p>
   
   <br><label for="hours available">What hours are you available on these days? <br>
@@ -1393,7 +1393,7 @@
   {{formData.requestDriverRecord.dob}}
   <br><label for="license number">Driver's License Number *:</label><br>
   {{formData.requestDriverRecord.licenseNumber}}
-  <br><label for="license number">I authorize ITNOrlando to request and receive my Driving Record from *:</label>
+  <br><label for="license number">I authorize ITN<em>{{affiliate}}</em> to request and receive my Driving Record from *:</label>
   {{formData.requestDriverRecord.authorize}}
   
   <p><strong>I certify that I have not been convicted or forfeited bond or collateral because of a moving violation during the last three years.</strong></p>
@@ -1551,8 +1551,8 @@
     <div class="page-template">
       <div class="header">
       </div>
-      <div class="watermark"><img ng-src="{{assetsPath}}/images/logo_white_bg.png" style="margin:auto;display:block" alt="main logo"/></div>
-      <div class="watermark"><img ng-src="{{assetsPath}}/images/logo_white_bg.png" style="margin:auto;display:block" alt="main logo"/></div>
+      <div class="watermark"><img ng-src="{{assetsPath}}/images/icons/itnlanier_white_bg.png" style="margin:auto;display:block" alt="main logo"/></div>
+      <div class="watermark"><img ng-src="{{assetsPath}}/images/icons/itnlanier_white_bg.png" style="margin:auto;display:block" alt="main logo"/></div>
       <div class="footer">
         Page #: pageNum # of #: totalPages #
       </div>
@@ -1561,9 +1561,9 @@
   
   <script>
   $(document).ready(function(){ 
-    $('#characterLeft').text('140 characters left');
+    $('#characterLeft').text('2000 characters left');
     $('#message').keydown(function () {
-        var max = 140;
+        var max = 2000;
         var len = $(this).val().length;
         if (len >= max) {
             $('#characterLeft').text('You have reached the limit');
