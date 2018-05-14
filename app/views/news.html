@@ -1,5 +1,5 @@
 
-    <div class="news">
+    <div class="news" ng-init="catchAnchor()">
       
     <div class="jumbotron section first-hero">
       <h1>News</h1>
@@ -30,6 +30,47 @@
         </ul>
         </div><!--newsletter-content-->
       </div><!--newsletter-->
+      
+      
+      <div class="row">
+        <div class="pressroom col-sm-6 row mt-100">
+          
+          <div class="col-sm-6 pressroom-image">
+            <div class="pressroom-title"><h3>Annoucements</h3></div>
+            <img ng-src="{{assetsPath}}/images/icons/announcement-icon.png" alt="annoucement icon"/>
+          </div><!--pressroom-image-->
+            
+            <div class="col-sm-12 wow fadeInUp mt-100" id="announcement-text" style="margin-left:10%;width:80%;">
+              
+              <p><strong><u>City of Winter Park Proclaims May 2018 as ITN<em>Orlando</em> Month</u></strong></p>
+              
+              <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FWinterParkFla%2Fvideos%2F10155374799905965%2F&width=650&show_text=false&height=364&appId" width="650" height="364" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" allowFullScreen="true"></iframe>
+              
+              <p><img ng-src="{{assetsPath}}/images/proclamation1.jpg" alt="mayor proclamation orlando picture 1" style="width:350px;margin:auto;display:block;margin-top:30px !important;"/></p>
+              <p><img ng-src="{{assetsPath}}/images/proclamation2.jpg" style="width:350px;margin:auto;display:block;margin-top:30px !important;" alt="mayor proclamation orlando picture 2"/></p>
+              <p><img ng-src="{{assetsPath}}/images/proclamation3.jpg" style="width:350px;margin:auto;display:block;margin-top:30px !important;" alt="mayor proclamation orlando picture 3"/></p>
+            </div>
+            
+
+          
+          
+        </div><!--pressroom-->
+        
+        <div class="newsletter col-sm-6 row mt-100">
+          
+          <div class="col-sm-6 newsletter-content special-events">
+            <div class="newsletter-title"><h3>Special Events</h3></div>
+            <img ng-src="{{assetsPath}}/images/icons/icon-events.png" alt="press icon"/>
+            <ul>
+              <!-- <li class="mt-50"><u>April 26 Senior Expo</u> <br>
+                 Sacred Heart Senior Living, Center Valley <br>
+                   10 a.m. – 1 p.m.</li> -->
+            </ul>
+          </div><!--newsletter-content-->
+          
+        </div><!--newsletter-->
+        
+      </div><!--row-->
       
     </div><!--news-content-->
     

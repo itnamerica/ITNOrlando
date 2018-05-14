@@ -51,7 +51,10 @@ myApp.config(function($stateProvider, $urlRouterProvider, $locationProvider){
       })
       .state('news', {
         url: '/news',
-        templateUrl: viewsPath + 'news.html'
+        templateUrl: viewsPath + 'news.html',
+        params: {
+          anchor: null
+        }
       })
       .state('non-rider-member', {
         url: '/non-rider-member',
@@ -84,11 +87,6 @@ myApp.config(function($stateProvider, $urlRouterProvider, $locationProvider){
       .state('volunteer-app', {
         url: '/volunteer-app',
         templateUrl: viewsPath + 'volunteer-app.html'
-            // resolve: {
-            //     formData: function ($scope) {
-            //         $scope.formData = {};
-            //     },
-            //   }
       })
       .state('newsletters', {
         url: '/newsletters',
