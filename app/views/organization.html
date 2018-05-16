@@ -11,10 +11,10 @@
             <a class="nav-link active" ng-click="scrollTo('board')">Board of Directors</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" ng-click="scrollTo('start')">Start an ITN in your community</a>
+            <a class="nav-link disabled" ng-click="scrollTo('staff')">Staff</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link disabled" ng-click="scrollTo('staff')">Staff</a>
+            <a class="nav-link" ng-click="scrollTo('start')">Start an ITN in your community</a>
           </li>
         </ul>
       
@@ -46,7 +46,7 @@
           <div class="col-sm-4">
             <img ng-src="{{assetsPath}}/images/board/Jerome_Williams.jpg" alt="Jerome Williams portrait"/>
             <h2>Jerome T .Williams</h2>
-            <p class="title">Board member</p>
+            <p class="title">Board Treasurer</p>
             <button type="button" class="btn btn-lg" ng-click="showBoardBio2 = !showBoardBio2">READ MORE</button>
             
             <div class="showBoardBio" ng-show="showBoardBio2">
@@ -58,12 +58,12 @@
           
           <div class="col-sm-4">
             <img ng-src="{{assetsPath}}/images/board/Lois_Mills.jpg" alt="Lois Mills portrait"/>
-            <h2>Lois Mills</h2>
-            <p class="title">Board Member</p>
+            <h2>Lois Mills & Sandy</h2>
+            <p class="title">Board Secretary</p>
             <button type="button" class="btn btn-lg" ng-click="showBoardBio3 = !showBoardBio3">READ MORE</button>
             
             <div class="showBoardBio" ng-show="showBoardBio3">
-              <p>Lois Mills is a native of New Jersey, a longtime resident of Orlando and a member of ITNOrlando for about five years, along with her German shepherd, Rita, who is her Seeing Eye dog.</p>
+              <p>Lois Mills is a native of New Jersey, a longtime resident of Orlando and a member of ITNOrlando for about five years, along with her Golden Retriever, Sandy, who is her Seeing Eye dog.</p>
 
               <p>Ms. Mills is well-versed in several academic areas including, social studies, English, American history, economics, and legal studies. She holds a B.A. from Caldwell College (now Caldwell University) in Caldwell, NJ, an M.A. from The Catholic University of America, Washington, DC, and a B.A. from the University of Central Florida, Orlando.</p>
 
@@ -78,6 +78,37 @@
         </div><!--row-->
         
       </section>
+      
+      
+      
+
+      <section class="org-section" id="staff">
+        <h1>Staff</h1>
+        <div class="container">
+
+          <div class="row mb-100">
+          <div class="col-sm-4">
+            <img ng-src="{{assetsPath}}/images/board/Zain_Durrani.jpg" alt="Zain Durrani portrait"/>
+            <h2>Zain Durrani</h2>
+            <p class="title"><strong>Operations Manager</strong></p>
+            <button type="button" class="btn btn-lg" ng-click="showBoardBio11 = !showBoardBio11">READ MORE</button>
+            
+            <div class="showBoardBio" ng-show="showBoardBio11">
+              <p>Zain Durrani, Operations Manager, began his tenure with ITNOrlando in 2013 as a driver. A native of Ohio, Zain attended the Miami University of Ohio until he decided to move to sunny Orlando where he is currently pursuing his Bachelor's degree. Before joining ITNOrlando, Zain managed a food market in Cincinnait, Ohio.</p>
+
+              <p>Zain and his wife reside in Orlando, Florida and enjoy spending time outside at the golf course with ITNOrlando member/volunteer Jack, stfadeInUpg through Universal Studios, or at the beach. At home, you can frequently find Zain in the kitchen trying out a new recipe; he hopes to one day open his own restaurant and share his love of food with others.</p>
+            </div>
+          </div><!--col-sm-4-->      
+        
+      <div class="col-sm-4"></div><!--col-sm-4-->
+
+      <div class="col-sm-4"></div><!--col-sm-4-->
+      </div><!--row-->
+
+
+      </div><!--container-->
+      </section>
+      
     
       <section class="org-section" id="start">
         <img class="itn-icon" ng-src="{{assetsPath}}/images/icons/itn3.png" alt="ITN icon"/>
@@ -118,55 +149,7 @@
         </div> -->
           </section>
 
-          <!-- <section class="org-section ta-center" id="staff">
-  <h1>Staff</h1>
-  
-  <div class="row mt-50 mb-50">
-    <div class="col-sm-2"></div>
-    <div class="col-sm-8">
-      <img ng-src="{{assetsPath}}/images/board/Zain_Durrani.jpg" alt="Zain Durrani portrait"/>
-      <h2>Zain Durrani</h2>
-      <p class="title"><strong>Operations Manager</strong></p>
-      
-      <div class="showBoardBio mt-25">
-        <p>Zain Durrani, Operations Manager, began his tenure with ITNOrlando in 2013 as a driver. A native of Ohio, Zain attended the Miami University of Ohio until he decided to move to sunny Orlando where he is currently pursuing his Bachelor's degree. Before joining ITNOrlando, Zain managed a food market in Cincinnait, Ohio.</p>
 
-        <p>Zain and his wife reside in Orlando, Florida and enjoy spending time outside at the golf course with ITNOrlando member/volunteer Jack, stfadeInUpg through Universal Studios, or at the beach. At home, you can frequently find Zain in the kitchen trying out a new recipe; he hopes to one day open his own restaurant and share his love of food with others.</p>
-      </div>
-    </div>
-    <div class="col-sm-2"></div>
-  </div>
-
-</section> -->
-
-
-
-        <section class="org-section" id="staff">
-          <h1>Staff</h1>
-          <div class="container">
-
-            <div class="row mb-100">
-            <div class="col-sm-4">
-              <img ng-src="{{assetsPath}}/images/board/Zain_Durrani.jpg" alt="Zain Durrani portrait"/>
-              <h2>Zain Durrani</h2>
-              <p class="title"><strong>Operations Manager</strong></p>
-              <button type="button" class="btn btn-lg" ng-click="showBoardBio11 = !showBoardBio11">READ MORE</button>
-              
-              <div class="showBoardBio" ng-show="showBoardBio11">
-                <p>Zain Durrani, Operations Manager, began his tenure with ITNOrlando in 2013 as a driver. A native of Ohio, Zain attended the Miami University of Ohio until he decided to move to sunny Orlando where he is currently pursuing his Bachelor's degree. Before joining ITNOrlando, Zain managed a food market in Cincinnait, Ohio.</p>
-
-                <p>Zain and his wife reside in Orlando, Florida and enjoy spending time outside at the golf course with ITNOrlando member/volunteer Jack, stfadeInUpg through Universal Studios, or at the beach. At home, you can frequently find Zain in the kitchen trying out a new recipe; he hopes to one day open his own restaurant and share his love of food with others.</p>
-              </div>
-            </div><!--col-sm-4-->      
-          
-        <div class="col-sm-4"></div><!--col-sm-4-->
-
-        <div class="col-sm-4"></div><!--col-sm-4-->
-        </div><!--row-->
-
-
-        </div><!--container-->
-        </section>
 
 
 
