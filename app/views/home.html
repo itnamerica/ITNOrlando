@@ -14,7 +14,7 @@
 <div class="carousel-inner">
   
   <div class="item active">
-    <img ng-src="{{assetsPath}}/images/dark/proclamation1.jpg" alt="mayor proclamation" style="object-position:top">
+    <img ng-src="{{assetsPath}}/images/dark/mrc-orlando2.jpg" alt="mayor proclamation" style="object-position:top">
     <h2 class="carousel-statement">
       City of Winter Park Proclaims May 2018 as ITN<em>Orlando</em> Month.
       <a ui-sref="news({anchor: 'announcement-text'})" style="color:white"><u>Read more</u></a>
@@ -92,15 +92,14 @@
       </div>
     </div>
     <div class="col-md-4 wow fadeInUp" data-wow-duration="1s" data-wow-delay="2s">
-      <a ui-sref="pay-online">
+      <a ui-sref="pay-by-phone">
         <div class="feature-icon" style="background: #529ba8">
           <i class="fa fa-usd"></i>
         </div>
       </a>
       <h6>Make a payment</h6>
       <div class="feature-description">
-        Replenish your Personal Transportation Account online
-        instantly, and securely, via PayPal
+        Replenish your Personal Transportation Account by phone.
       </div><!--feature description-->
     </div><!--col-md-4-->
   </div><!--features-->
@@ -130,35 +129,14 @@
   <!--CONTAINER-->
 </div><!-- PROGRESS-->
 
-<!-- <div class="jumbotron section rider-stories">
-  <div class="container section-content">
-    <h1>Rider Stories</h1>
-      <div class="col-lg-5 rider-stories-text">            
-        <h4>Ellie wants to know how much she should tip the driver, who says "No thank you. You owe me nothing." <br>
-        Initially Ellie tries to argue because she just tipped the "girl" who did her hair, but the driver reassures her that no tip is required.</h4>
-        <h5>-Written by Nancy McCormick <br>
-        (ITNCoastalCT)<h5>
-        <p><a ui-sref="rider-stories" class="btn btn-primary btn-lg mt-25">READ MORE</a></p>
-      </div>
-      <div class="col-lg-5 rider-stories-text">
-        <h4>Recently, ITNMontereyCounty had a member sign on who needed the service only for a couple of months while he recovered from open heart surgery. <br>
-        Robert needed us three times a week to get to and from his cardiac rehab appointments. Though this was a temporary thing for him, he was moved by how much it impacted his life.</h4>
-          <h5>-Written by Samantha Kelley <br>
-        (ITNMontereyCounty)</h5>
-        <p>
-          <a ui-sref="rider-stories" class="btn btn-primary btn-lg mt-25">READ MORE</a>
-        </p>
-      </div>
-  </div>
-</div> -->
 
 <div class="jumbotron section regeneron">
   <div class="container section-content">
     <h2>Regeneron and ITN<em>America</em></h2>
     <!-- <div class="row"> -->
       <div class="col-sm-9 reg-text">
-        ITN<em>Orlando</em> is part of the nationwide network of ITN<em>America</em> affiliates.
-        ITN<em>America</em> is proud to recognize Regeneron Pharmaceuticals, Inc. as a corporate sponsor committed to helping raise awareness of the challenges associated with vision impairment, low vision, senior mobility issues and the shortage of locally-available transportation options for seniors. As the National Pharmaceutical Eye-care Services Sponsor for ITN<em>America</em> and our affiliate communities, Regeneron Pharmaceuticals is proud to support ITN's mission to promote safe senior mobility. 
+        <strong>ITN<em>Orlando</em> is part of the nationwide network of ITN<em>America</em> affiliates.
+        ITN<em>America</em> is proud to recognize Regeneron Pharmaceuticals, Inc. as a corporate sponsor committed to helping raise awareness of the challenges associated with vision impairment, low vision, senior mobility issues and the shortage of locally-available transportation options for seniors. As the National Pharmaceutical Eye-care Services Sponsor for ITN<em>America</em> and our affiliate communities, Regeneron Pharmaceuticals is proud to support ITN's mission to promote safe senior mobility. </strong>
       </div>
       <div class="col-sm-3 reg-img">
         <img ng-src="{{assetsPath}}/images/regeneron_logo.jpg" alt="regeneron logo" style="width: 300px"/>
@@ -175,36 +153,6 @@
     $('.carousel').carousel({
       interval: 3500
     })
-    
-    var firstTime = true;
-    $(window).scroll(function() {
-       var hT = $('#progress').offset().top,
-           hH = $('#progress').outerHeight(),
-           wH = $(window).height(),
-           wS = $(this).scrollTop();
-       if (wS > (hT+hH-wH)){
-         if (firstTime){
-           $('.numbers').each(function () {
-               $(this).prop('Counter',0).animate({
-                   Counter: $(this).text()
-               }, {
-                   duration: 4000,
-                   easing: 'swing',
-                   step: function (now) {
-                       $(this).text(Math.ceil(now));
-                   }
-               });
-           });
-           firstTime = false;
-         }
-       }
-    });
-    
-    
-  
   });
-</script>
-
-<script>
-new WOW().init();
+  new WOW().init();
 </script>
