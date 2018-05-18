@@ -44,16 +44,21 @@
             <div class="itn-title col-sm-6">
               <h2>Ways to become a volunteer</h2>
               <hr align="left" width="35%">
-              <p>There are 2 ways to join ITN<em>Orlando</em> as a volunteer:</p>
+              <p>There are 3 ways to join ITN<em>Orlando</em> as a volunteer:</p>
             </div><!--itn-title-->
           </div><!--row-->
         
         <div class="membership-btns row ta-center m-50">
-          <a class="btn btn-primary btn-lg" ui-sref="volunteer-app" role="button">
-            Online Volunteer Application</a>
-          <a class="btn btn-primary btn-lg" 
+          <a class="btn btn-primary btn-lg" style="margin-top:15px" ui-sref="volunteer-app" role="button">
+            Online Volunteer Driver Application</a>
+          <a class="btn btn-primary btn-lg" style="margin-top:15px"
              ng-click="redirectToURL(assetsPath + '/images/docs/VolunteerDriverApplication.pdf')" 
-             role="download driver app" download>Download PDF Volunteer Application</a>
+             role="download driver app" download>Download PDF Volunteer Driver Application</a>
+          <a class="btn btn-primary btn-lg" style="margin-top:15px" ng-click="inOffice = !inOffice" role="button">
+           Volunteer in Office</a>
+           <p ng-show="inOffice" style="padding:10px;text-align:center;margin-top:50px">
+             <strong>If you would like to volunteer in office, please call us at (407) 900-7572.</strong>
+           </p>
              
              <p class="mt-25"><small>If you need the Adobe Acrobat Reader you can <a href="http://www.adobe.com/products/acrobat/readstep2.html" target="_blank">download it by clicking here. <img alt="Adobe Acrobat Reader Download" ng-src="{{assetsPath}}/images/icons/acrobat_reader-20x20.jpg" style="width: 20px; height: 20px;" /></a></small></p>
         </div>

@@ -1345,7 +1345,7 @@ form textarea.form-control {font-size:25px}
   background-repeat: no-repeat !important;
   height: 400px !important;
 }
-.volunteer-drive #first-hero-volunteer-drive h1{
+.volunteer-drive #first-hero-volunteer-drive h1, .volunteer-drive #first-hero-volunteer-drive h2{
   color:white !important;
   text-shadow: 2px 2px #529ba8;
   margin-top:170px !important;
