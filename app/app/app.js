@@ -188,6 +188,8 @@ myApp.controller('MainController', ['$scope', '$transitions','$http', '$anchorSc
   $scope.states = ['Alabama','Alaska','American Samoa','Arizona','Arkansas','California','Colorado','Connecticut','Delaware','District of Columbia','Federated States of Micronesia','Florida','Georgia','Guam','Hawaii','Idaho','Illinois','Indiana','Iowa','Kansas','Kentucky','Louisiana','Maine','Marshall Islands','Maryland','Massachusetts','Michigan','Minnesota','Mississippi','Missouri','Montana','Nebraska','Nevada','New Hampshire','New Jersey','New Mexico','New York','North Carolina','North Dakota','Northern Mariana Islands','Ohio','Oklahoma','Oregon','Palau','Pennsylvania','Puerto Rico','Rhode Island','South Carolina','South Dakota','Tennessee','Texas','Utah','Vermont','Virgin Island','Virginia','Washington','West Virginia','Wisconsin','Wyoming'];
   $scope.itnSources = ['Family','Friend','Speaker','Doctor','Radio','Television','Flier','Book','Phone','Agency on Aging', 'Social Worker','Internet','Referred by Current Member'];
   $scope.ratings = ['None',1,2,3,4,5,6];
+  $scope.zipInput = '';
+  $scope.zipMatch = '';
   $scope.keyword = '';
   $scope.keywordPages = '';
   $scope.urlsWithKeyword = [];
@@ -209,7 +211,7 @@ myApp.controller('MainController', ['$scope', '$transitions','$http', '$anchorSc
     {name: 'Donate', state: 'donate', url: $scope.viewsPath + '/donate.html'},
     {name: 'Corporate Partnership', state: 'corporate', url: $scope.viewsPath + '/corporate.html'}
   ];
-  
+  var zipsWeService = ['32801  -  Orlando', '32801  -  Orlando','32803  -  Orlando','32804  -  Orlando','32805  -  Orlando','32806  -  Orlando','32807  -  Orlando','32808  -  Orlando','32809  -  Orlando','32810  -  Orlando','32811  -  Orlando','32812  -  Orlando','32814  -  Orlando','32817  -  Orlando','32822  -  Orlando','32839  -  Orlando','32701  -  Altamonte Springs','32714  -  Altamonte Springs','32707  -  Casselberry/Fern Park','32730  -  Casselberry/Fern Park','32750  -  Longwood','32779  -  Longwood','32751  -  Maitland','32789  -  Winter Park','32792  -  Winter Park','32708  -  Winter Springs'];  
 
   $transitions.onSuccess({}, function(transition){
       $scope.resetFormData();
@@ -284,6 +286,17 @@ myApp.controller('MainController', ['$scope', '$transitions','$http', '$anchorSc
     else if (direction == 'less') {
       $scope.zoomLevel -= 1;
     }    
+  }
+  
+  $scope.zipSearch = function(){
+    $scope.zipMatch = '';
+    for (var zip in zipsWeService){
+      if (zipsWeService[zip].indexOf($scope.zipInput) > -1){
+        $scope.zipMatch = zipsWeService[zip];
+      } else {
+        $scope.zipMatch = "We don't offer service for this area";
+      }
+    }
   }
 
   $scope.searchKeyword = function(){

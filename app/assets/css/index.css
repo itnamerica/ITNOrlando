@@ -344,12 +344,22 @@ nav .dropdown-menu li.divider{
   margin-top: 4%;
 }
 .services .operate ul {
-  /*margin-top:20%;*/
   margin-top:5%;
   list-style-type:none;
   font-size:20px;
   font-weight:bold;
   white-space: nowrap;
+}
+.services .operate input {
+  margin:auto;
+  width:70%;
+  font-size:25px;
+  padding:10%;
+}
+.services .operate .btn {
+  margin-top:20px;
+  padding:10px 20px;
+  margin-left:5px;
 }
 .services .jumbo-title {
   background-color: #399eaa;
