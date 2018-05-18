@@ -348,12 +348,27 @@ myApp.controller('MainController', ['$scope', '$transitions','$http', '$anchorSc
     }, stepTime);
   }
   
+  // $scope.resizeText = function(multiplier) {
+  //   if (document.body.style.fontSize == "") {
+  //     document.body.style.fontSize = "1.0em";
+  //   }
+  //     document.body.style.fontSize = parseFloat(document.body.style.fontSize) + (multiplier * 0.2) + "em";
+  //   }
+  var fontSize = 1;
   $scope.resizeText = function(multiplier) {
-    if (document.body.style.fontSize == "") {
-      document.body.style.fontSize = "1.0em";
+    fontSize += multiplier;
+    document.body.style.fontSize = fontSize + "em";
     }
-      document.body.style.fontSize = parseFloat(document.body.style.fontSize) + (multiplier * 0.2) + "em";
-    }
+
+    // var fontSize = 1;
+    // function zoomIn() {
+    // 	fontSize += 0.1;
+    // 	document.body.style.fontSize = fontSize + "em";
+    // }
+    // function zoomOut() {
+    // 	fontSize -= 0.1;
+    // 	document.body.style.fontSize = fontSize + "em";
+    // }
 
   $scope.submitForm = function(formType){
     console.log('submitForm, formData is', $scope.formData);
