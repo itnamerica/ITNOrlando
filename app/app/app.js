@@ -360,15 +360,15 @@ myApp.controller('MainController', ['$scope', '$transitions','$http', '$anchorSc
     document.body.style.fontSize = fontSize + "em";
     }
 
-    // var fontSize = 1;
-    // function zoomIn() {
-    // 	fontSize += 0.1;
-    // 	document.body.style.fontSize = fontSize + "em";
-    // }
-    // function zoomOut() {
-    // 	fontSize -= 0.1;
-    // 	document.body.style.fontSize = fontSize + "em";
-    // }
+$scope.resizeText2 = function(multiplier) {
+  if (multiplier === 'big'){
+    $('#main-content-inner').css('transform','scale(1.1)')
+  } else if (multiplier === 'default'){
+    $('#main-content-inner').css('transform','scale(1)')
+  } else if (multiplier === 'small'){
+    $('#main-content-inner').css('transform','scale(0.9)')
+  }
+}
 
   $scope.submitForm = function(formType){
     console.log('submitForm, formData is', $scope.formData);
