@@ -347,21 +347,16 @@ myApp.controller('MainController', ['$scope', '$transitions','$http', '$anchorSc
         }
     }, stepTime);
   }
-
-$scope.resizeText = function(multiplier) {
-  if (multiplier === 'big'){
-    $('#main-content-inner').css('transform','scale(1.1)')
-  } else if (multiplier === 'default'){
-    $('#main-content-inner').css('transform','scale(1)')
-  } else if (multiplier === 'small'){
-    $('#main-content-inner').css('transform','scale(0.9)')
-  }
-}
   
   var zoomLevel = 1;
   $scope.resizeText = function(multiplier) {
-    zoomLevel += multiplier;
-    $('#main-content-inner').css('transform','scale(' + zoomLevel + ')');
+    if (multiplier){
+      zoomLevel += multiplier;
+      $('#main-content-inner').css('transform','scale(' + zoomLevel + ')');
+    } else {
+      $('#main-content-inner').css('transform','scale(1)');
+    }
+    
   }
 
   $scope.submitForm = function(formType){
