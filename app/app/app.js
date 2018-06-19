@@ -355,8 +355,7 @@ myApp.controller('MainController', ['$scope', '$transitions','$http', '$anchorSc
       $('#main-content-inner').css('transform','scale(' + zoomLevel + ')');
     } else {
       $('#main-content-inner').css('transform','scale(1)');
-    }
-    
+    }  
   }
 
   $scope.submitForm = function(formType){
