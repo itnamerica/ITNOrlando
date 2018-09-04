@@ -61,9 +61,9 @@ myApp.config(function($stateProvider, $urlRouterProvider, $locationProvider){
         url: '/organization',
         templateUrl: viewsPath + 'organization.html'
       })
-      .state('pay-online', {
-        url: '/pay-online',
-        templateUrl: viewsPath + 'pay-online.html'
+      .state('pay-by-phone', {
+        url: '/pay-by-phone',
+        templateUrl: viewsPath + 'pay-by-phone.html'
       })
       .state('rider-stories', {
         url: '/rider-stories',
