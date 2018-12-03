@@ -1,13 +1,15 @@
 
     <div class="news" ng-init="catchAnchor()">
-      
+
     <div class="jumbotron section first-hero">
       <h1>News</h1>
     </div><!--first-hero-->
-    
+
     <div class="jumbotron section news-content">
-      
-      <div class="pressroom col-sm-6 row">
+
+    <div class="row row-eq-height">
+
+      <div class="pressroom col-sm-6">
         <a href="http://pressroom.itnamerica.org/category/itnorlando/">
         <div class="col-sm-6 pressroom-image">
           <div class="pressroom-title"><h3>Pressroom</h3></div>
@@ -18,46 +20,45 @@
         </div><!--pressroom-image-->
         </a>
       </div><!--pressroom-->
-      
-      <div class="newsletter col-sm-6 row">
+
+      <div class="newsletter col-sm-6">
         <div class="col-sm-6 newsletter-content">
           <div class="newsletter-title"><h3>Newsletters</h3></div>
           <img ng-src="{{assetsPath}}/images/icons/news-noword.png" alt="press icon"/>
           <ul>
-            <!-- <li class="wow fadeInUp"><a 
-               ng-click="redirectToURL(assetsPath + '/images/docs/newsletter/2018_Mar_Apr_newsletter.pdf')"  
+            <!-- <li class="wow fadeInUp"><a
+               ng-click="redirectToURL(assetsPath + '/images/docs/newsletter/2018_Mar_Apr_newsletter.pdf')"
                role="newsletter march april 2018">Newsletter March-April 2018</a></li> -->
         </ul>
         </div><!--newsletter-content-->
       </div><!--newsletter-->
-      
-      
-      <div class="row">
-        <div class="pressroom col-sm-6 row mt-100">
-          
+
+      </div><!--row-->
+
+
+      <div class="row row-eq-height">
+        <div class="pressroom col-sm-6 mt-100">
+
           <div class="col-sm-6 pressroom-image">
             <div class="pressroom-title" id="announcement-text"><h3>Annoucements</h3></div>
             <img ng-src="{{assetsPath}}/images/icons/announcement-icon.png" alt="annoucement icon"/>
           </div><!--pressroom-image-->
-            
-            <div class="col-sm-12 wow fadeInUp mt-100" style="margin-left:10%;width:80%;">
-              
+
+            <div class="col-sm-12 mt-100" style="margin-left:10%;width:80%;">
+
               <p><strong><u>City of Winter Park Proclaims May 2018 as ITN<em>Orlando</em> Month</u></strong></p>
-              
+
               <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FWinterParkFla%2Fvideos%2F10155374799905965%2F&width=650&show_text=false&height=364&appId" width="650" height="364" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" allowFullScreen="true"></iframe>
-              
+
               <p><img ng-src="{{assetsPath}}/images/proclamation1.jpg" alt="mayor proclamation orlando picture 1" style="width:350px;margin:auto;display:block;margin-top:30px !important;"/></p>
               <p><img ng-src="{{assetsPath}}/images/proclamation2.jpg" style="width:350px;margin:auto;display:block;margin-top:30px !important;" alt="mayor proclamation orlando picture 2"/></p>
               <p><img ng-src="{{assetsPath}}/images/proclamation3.jpg" style="width:350px;margin:auto;display:block;margin-top:30px !important;" alt="mayor proclamation orlando picture 3"/></p>
             </div>
-            
 
-          
-          
         </div><!--pressroom-->
-        
-        <div class="newsletter col-sm-6 row mt-100">
-          
+
+        <div class="newsletter col-sm-6 mt-100">
+
           <div class="col-sm-6 newsletter-content special-events">
             <div class="newsletter-title"><h3>Special Events</h3></div>
             <img ng-src="{{assetsPath}}/images/icons/icon-events.png" alt="press icon"/>
@@ -67,63 +68,58 @@
                    10 a.m. – 1 p.m.</li> -->
             </ul>
           </div><!--newsletter-content-->
-          
-        </div><!--newsletter-->
-        
-      </div><!--row-->
-      
-      
-      
-      
-      
-<!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-<div class="modal-dialog" role="document">
-  <div class="modal-content" style="font-size:25px">
-    <div class="modal-header" style="background:#529ba8;color:white">
-      <h3 class="modal-title" id="exampleModalLabel">Subscribe to our newsletter</h3>
-      <button type="button" style="margin-top: -30px" class="close" data-dismiss="modal" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-      </button>
-    </div>
-    <div class="modal-body">
-      <form novalidate name="itnForm" ng-model="formData" ng-submit="submitForm('newsletter')" role="newsletter form">
-        
-        <div class="form-group ta-center" ng-class="{ 'has-error' : itnForm.email.$invalid && !itnForm.email.$pristine }">
-          <label for="newsletter signup" style="margin-bottom:15px">Your email address: </label><br>
-          <input type="text" class="form-control center-block" id="email" name="email" placeholder="Example: test@example.com" ng-model="formData.email" ng-pattern="emailPattern" style="width:70%">
-          <span ng-if="itnForm.email.$error.pattern" class="help-block">{{errorMessages.email}}</span>
-        </div> 
-        
-        <p ng-if="loading"><em>Loading. Please wait</em></p>
-        <p style="color:red; margin-top:50px"><strong>{{serverMessage}}</strong></p>
 
-        <button type="submit" class="btn btn-lg center-block" ng-disabled="loading">Sign me up</button>
-      </form>
-      
-    </div>
-    <div class="modal-footer">
-      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div><!--newsletter-->
+
+      </div><!--row-->
+
+
+    </div><!--news-content-->
+
+  </div><!--news-->
+
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content" style="font-size:25px">
+      <div class="modal-header" style="background:#529ba8;color:white">
+        <h3 class="modal-title" id="exampleModalLabel">Subscribe to our newsletter</h3>
+        <button type="button" style="margin-top: -30px" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form novalidate name="itnForm" ng-model="formData" ng-submit="submitForm('newsletter')" role="newsletter form">
+
+          <div class="form-group ta-center" ng-class="{ 'has-error' : itnForm.email.$invalid && !itnForm.email.$pristine }">
+            <label for="newsletter signup" style="margin-bottom:15px">Your email address: </label><br>
+            <input type="text" class="form-control center-block" id="email" name="email" placeholder="Example: test@example.com" ng-model="formData.email" ng-pattern="emailPattern" style="width:70%">
+            <span ng-if="itnForm.email.$error.pattern" class="help-block">{{errorMessages.email}}</span>
+          </div>
+
+          <p ng-if="loading"><em>Loading. Please wait</em></p>
+          <p style="color:red; margin-top:50px"><strong>{{serverMessage}}</strong></p>
+
+          <button type="submit" class="btn btn-lg center-block" ng-disabled="loading">Sign me up</button>
+        </form>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
     </div>
   </div>
-</div>
-</div><!--end modal-->
-      
-      
-      
-      
-      
-    </div><!--news-content-->
-    
-  </div><!--news-->
-  
-  
-  
+  </div><!--end modal-->
+
+
+
   <script>
-  
+
     $(document).ready(function(){
       new WOW().init();
       $('#myModal').modal('show');
     })
-  
+
   </script>
